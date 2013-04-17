@@ -46,6 +46,8 @@ gem 'refinerycms-blog', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
 
+gem 'refinerycms-bootstrap'
+
 # Deploy with Capistrano
 group :deployment do
   gem 'capistrano'
