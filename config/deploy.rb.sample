@@ -1,3 +1,5 @@
+require 'rvm/capistrano'
+
 set :application, "refinery"
 set :repository,  "refinery"
 set :scm, :git
@@ -8,6 +10,7 @@ set :scm, :git
 role :web, "sakura0"                          # Your HTTP server, Apache/etc
 role :app, "sakura0"                          # This may be the same as your `Web` server
 role :db,  "sakura0", :primary => true # This is where Rails migrations will run
+set :rvm_type, :user  # Literal ":user"
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
