@@ -1,0 +1,9 @@
+= yield :before_javascript_libraries
+= yield :javascript_libraries
+= yield :after_javascript_libraries
+- if request.env['HTTP_USER_AGENT'] =~ /MSIE/
+  /[if lt IE 7 ]
+    <haml:loud> javascript_include_tag &amp;#39;dd_belatedpng&amp;#39; </haml:loud>
+    <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+= javascript_include_tag 'application'
+= yield :javascripts
