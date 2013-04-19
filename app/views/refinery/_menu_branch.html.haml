@@ -1,10 +1,12 @@
 - if local_assigns[:apply_css]
-  - classes = menu_branch_css(local_assigns)).any?
+  - classes = menu_branch_css(local_assigns).any?
 - else
   - classes = []
 %li{ class: classes }
   = link_to menu_branch.title, refinery.url_for(menu_branch.url)
-  - if (children = menu_branch.children unless hide_children).present? && (!local_assigns[:menu_levels] || menu_branch.ancestors.length < local_assigns[:menu_levels])
+  - children = (hide_children ? nil : menu_branch.children)
+  - menu_branch = (children.present? && (!local_assigns[:menu_levels] || menu_branch.ancestors.length < local_assigns[:menu_levels]))
+  - if menu_branch
     %ul.clearfix
       - locals = { apply_css: local_assigns[:apply_css], hide_children: !!hide_children, menu_levels: local_assigns[:menu_levels] }
       = render partial: '/refinery/menu_branch', collection: children, locals: locals

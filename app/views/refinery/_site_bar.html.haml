@@ -6,12 +6,9 @@
     #site_bar_content.clearfix
       #editor_switch
         = site_bar_switch_link
-      = link_to image_tag("#{"http://refinerycms.com/images/" unless local_request?}refinery/logo-site-bar.png", :alt => "Refinery (tm) Content Manager"), |
-        'http://refinerycms.com',                                                                                                                          |
-        :target => '_blank',                                                                                                                               |
-        :id => 'site_bar_refinery_cms_logo'                                                                                                                |
+      - image = image_tag("#{"http://refinerycms.com/images/" unless local_request?}refinery/logo-site-bar.png", alt: "Refinery (tm) Content Manager")
+      = link_to image, 'http://refinerycms.com', target: '_blank', id: 'site_bar_refinery_cms_logo'
       #site_bar_branding
         %span#site_bar_company_name
           = Refinery::Core.site_name
-        = link_to t('.log_out', site_bar_translate_locale_args),       |
-          refinery.destroy_refinery_user_session_path, :id => 'logout' |
+        = link_to t('.log_out', site_bar_translate_locale_args), refinery.destroy_refinery_user_session_path, id: 'logout'
