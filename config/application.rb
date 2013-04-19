@@ -66,3 +66,5 @@ module Refinery
     config.assets.version = '1.0'
   end
 end
+
+Haml::Template.options[:ugly] = true
