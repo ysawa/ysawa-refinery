@@ -16,7 +16,7 @@
             = raw tags.collect { |tag| link_to tag, refinery.blog_tagged_posts_path(tag.id, tag.name.parameterize) }.to_sentence
     %section.clearfix
       - if blog_post_teaser_enabled?
-        = blog_post_teaser(post)
+        = truncate(strip_tags(post.body), length: 200)
       - else
         = post.body.html_safe
     %footer
