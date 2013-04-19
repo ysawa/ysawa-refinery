@@ -4,6 +4,6 @@
   - dom_id ||= 'menu'
   - hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
   - locals = { hide_children: hide_children, sibling_count: (roots.length - 1), menu_levels: local_assigns[:menu_levels], apply_css: true }
-  %nav.container.nav-collapse
-    %ul.nav
-      = render partial: '/refinery/menu_branch', collection: roots, locals: locals
+  %ul.nav.nav-list
+    %li.nav-header Menu
+    = render partial: '/refinery/menu_branch', collection: roots, locals: locals

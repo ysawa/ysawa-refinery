@@ -1,10 +1,4 @@
 .navbar.navbar-fluid-top
   .navbar-inner
     .container-fluid
-      %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
       = link_to Refinery::Core.site_name, refinery.root_path, class: :brand
-      .container.nav-collapse
-        = render(partial: "/refinery/menu", locals: { dom_id: 'menu', css: 'menu' })

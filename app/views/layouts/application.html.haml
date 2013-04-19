@@ -9,11 +9,7 @@
       .row-fluid
         .span3
           .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+            = render(partial: "/refinery/menu", locals: { dom_id: 'menu', css: 'menu' })
         .span9
           = render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/
           = bootstrap_flash
