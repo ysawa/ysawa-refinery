@@ -2,7 +2,6 @@
 %html
   = render '/refinery/head'
   %body
-    = render('/refinery/site_bar', head: true)
     = render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/
     #page_container
       %header#header
