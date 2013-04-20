@@ -10,7 +10,18 @@
 # WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 # GO AFTER THE REQUIRES BELOW.
 #
-#= require jquery
+#= require jquery-2.0.0
 #= require jquery_ujs
+#= require jquery.pjax
 #= require twitter/bootstrap
 #= require_tree .
+
+$ ->
+
+  # Triggers of PJAX
+  $(document).pjax('a:not([data-remote]):not([data-behavior]):not([data-skip-pjax])', '[data-pjax-container]')
+
+  # After PJAX requests, we can operate callbacks as we like.
+  on_pjax_reload = ->
+
+  $(document).on('ready pjax:end', on_pjax_reload)

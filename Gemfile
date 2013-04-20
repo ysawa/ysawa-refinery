@@ -20,6 +20,9 @@ group :assets do
   gem 'haml-rails'
 end
 
+# Pjax
+gem 'rack-pjax'
+
 gem 'jquery-rails', '~> 2.0.0'
 gem 'haml'
 
