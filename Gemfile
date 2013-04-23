@@ -21,7 +21,7 @@ group :assets do
 end
 
 # Pjax
-gem 'rack-pjax'
+# gem 'rack-pjax'
 
 gem 'jquery-rails', '~> 2.0.0'
 gem 'haml'
