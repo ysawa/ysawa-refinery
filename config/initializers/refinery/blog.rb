@@ -1,5 +1,5 @@
 Refinery::Blog.configure do |config|
-  # config.validate_source_url = false
+  config.validate_source_url = false
 
   # config.comments_per_page = 10
 

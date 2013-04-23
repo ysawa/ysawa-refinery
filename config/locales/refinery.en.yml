@@ -1,0 +1,4 @@
+en:
+  refinery:
+    footer:
+      copyright: "(c) %{year} %{site_name}"
