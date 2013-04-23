@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130417152117) do
+ActiveRecord::Schema.define(:version => 20130423163333) do
 
   create_table "refinery_blog_categories", :force => true do |t|
     t.string   "title"
@@ -200,6 +200,15 @@ ActiveRecord::Schema.define(:version => 20130417152117) do
   end
 
   add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"
+
+  create_table "refinery_works", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "image_id"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"
