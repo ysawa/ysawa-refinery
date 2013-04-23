@@ -11,4 +11,4 @@
   - Refinery::I18n.frontend_locales.each do |locale|
     - name = Refinery::I18n.locales[locale]
     %li
-      = link_to name, root_path({ locale: locale })
+      = link_to name, refinery.root_path({ locale: locale })
