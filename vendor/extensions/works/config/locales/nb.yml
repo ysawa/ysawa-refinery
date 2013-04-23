@@ -1,0 +1,29 @@
+nb:
+  refinery:
+    plugins:
+      works:
+        title: Works
+    works:
+      admin:
+        works:
+          actions:
+            create_new: Lag en ny Work
+            reorder: Endre rekkefølgen på Works
+            reorder_done: Ferdig å endre rekkefølgen Works
+          records:
+            title: Works
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Works enda. Klikk på "Lag en ny Work" for å legge til din første work.
+          work:
+            view_live_html: Vis hvordan denne work ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne work
+            delete: Fjern denne work permanent
+      works:
+        show:
+          other: Andre Works
+  activerecord:
+    attributes:
+      'refinery/works/work':
+        title: Title
+        description: Description
+        image: Image

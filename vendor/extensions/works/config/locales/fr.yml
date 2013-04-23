@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      works:
+        title: Works
+    works:
+      admin:
+        works:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Work
+            reorder: Réordonner les Works
+            reorder_done: Fin de réordonnancement des Works
+          records:
+            title: Works
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Work. Cliquer sur "Créer un(e) nouve(au/l/lle) Work" pour créer votre premi(er/ère) work.'
+          work:
+            view_live_html: Voir ce(t/tte) work <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) work
+            delete: Supprimer définitivement ce(t/tte) work
+      works:
+        show:
+          other: Autres Works
+  activerecord:
+    attributes:
+      'refinery/works/work':
+        title: Title
+        description: Description
+        image: Image

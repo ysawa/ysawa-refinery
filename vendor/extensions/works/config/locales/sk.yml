@@ -1,0 +1,29 @@
+sk:
+  refinery:
+    plugins:
+      works:
+        title: Works
+    works:
+      admin:
+        works:
+          actions:
+            create_new: Pridať Work
+            reorder: Preusporiadať Works
+            reorder_done: Koniec radenia Works
+          records:
+            title: Works
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Works. Kliknite na "Pridať Work" pre pridanie prvého work.
+          work:
+            view_live_html: Zobraziť náhľad work<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť work
+            delete: Zmazať work
+      works:
+        show:
+          other: Daľšie Works
+  activerecord:
+    attributes:
+      'refinery/works/work':
+        title: Title
+        description: Description
+        image: Image

@@ -1,0 +1,29 @@
+nl:
+  refinery:
+    plugins:
+      works:
+        title: Works
+    works:
+      admin:
+        works:
+          actions:
+            create_new: Maak een nieuwe Work
+            reorder: Wijzig de volgorde van de Works
+            reorder_done: Klaar met het wijzingen van de volgorde van de Works
+          records:
+            title: Works
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Works. Druk op 'Maak een nieuwe Work' om de eerste aan te maken.
+          work:
+            view_live_html: Bekijk deze work op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze work
+            delete: Verwijder deze work voor eeuwig
+      works:
+        show:
+          other: Andere Works
+  activerecord:
+    attributes:
+      'refinery/works/work':
+        title: Title
+        description: Description
+        image: Image

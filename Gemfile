@@ -61,3 +61,5 @@ group :deployment do
   gem 'capistrano_colors'
   gem 'rvm-capistrano'
 end
+
+gem 'refinerycms-works', :path => 'vendor/extensions'
