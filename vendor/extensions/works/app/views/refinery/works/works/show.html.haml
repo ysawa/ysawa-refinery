@@ -1,0 +1,26 @@
+- content_for :body_content_title do
+  = @work.title
+
+- content_for :body do
+  %section
+    %h2 Title
+    %p
+      = raw @work.title
+  %section
+    %h2 Description
+    %p
+      = raw @work.description
+  %section
+    %h2 Image
+    %p
+      = image_fu @work.image, nil
+
+- content_for :side_body do
+  %aside
+    %h2= t('.other')
+    %ul#works
+      - @works.each do |work|
+        %li
+          = link_to work.title, refinery.works_work_path(work)
+
+= render '/refinery/content_page'

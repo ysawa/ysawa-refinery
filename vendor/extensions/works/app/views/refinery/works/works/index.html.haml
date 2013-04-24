@@ -1,0 +1,6 @@
+- content_for :body do
+  %ul#works
+    - @works.each do |work|
+      %li
+        = link_to work.title, refinery.works_work_path(work, locale: Refinery::I18n.default_locale)
+= render '/refinery/content_page'
