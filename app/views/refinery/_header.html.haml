@@ -2,3 +2,8 @@
   .navbar-inner
     .container-fluid
       = link_to Refinery::Core.site_name, refinery.root_path, class: :brand
+      %ul.pull-right.nav
+        - Refinery::I18n.frontend_locales.each do |locale|
+          - name = Refinery::I18n.locales[locale]
+          %li
+            = link_to name, refinery.root_path({ locale: locale })

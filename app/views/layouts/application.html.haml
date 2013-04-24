@@ -10,7 +10,7 @@
         .span3
           .well.sidebar-nav
             = render(partial: "/refinery/menu", locals: { dom_id: 'menu', css: 'menu' })
-        .span9{ 'data-pjax-container' => true }
+        .span9
           = render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/
           = bootstrap_flash
           = yield
