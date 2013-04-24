@@ -4,9 +4,8 @@
     = render '/refinery/head'
   %body
     = render '/refinery/header'
-    .container-fluid
-
-      .row-fluid
+    .container#main_container
+      .row
         .span3
           .well.sidebar-nav
             = render(partial: "/refinery/menu", locals: { dom_id: 'menu', css: 'menu' })
