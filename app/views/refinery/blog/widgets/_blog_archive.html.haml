@@ -1,0 +1,6 @@
+%section#blog_archive_widget
+  %h2= t('archives', scope: 'refinery.blog.shared')
+  %nav
+    %ul
+      - links.each do |link|
+        %li= link
